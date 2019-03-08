@@ -1,0 +1,115 @@
+body{
+    background-image:url(../img/pp.png);
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+    
+}
+
+header {
+
+	height: 10px;
+	color: #CE852A;
+	display: flex;
+    
+    
+    align-items: center;
+}
+
+#btn-menu{
+	display: none;
+}
+
+
+header label {
+	font-size: 10px;
+	cursor: pointer;
+	display: none;
+}
+
+.menu ul{
+	background: #CE852A;
+	display: flex;
+	list-style: none;
+}
+
+.menu ul ul{
+	display: none;
+}
+
+.menu a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu a:hover {
+
+	background: rgba(0,0,0,0.3);
+}
+
+.menu a span{
+	margin-left: 10px;
+}
+
+
+
+.menu ul li:hover ul {
+	display: block;
+	position: absolute;
+}
+
+@media (max-width: 768px){
+	header label {
+		display: block;
+
+	}
+
+	.menu{
+		position: absolute;
+		top: 500;
+		right: 0px;
+		width: 100%;
+		transform: translateY(50%);
+		transition: all 0.3s;
+	}
+
+	.menu ul{
+		flex-direction: column;
+		background: #555;
+	}
+
+	.menu ul li:hover ul{
+		display: none;
+        position: static;
+	}
+
+	.menu a span{
+		position: absolute;
+		right: 5px;
+
+	}
+
+	#btn-menu:checked ~ .menu{
+
+		transform: translateY(200%);
+	}
+
+    
+    .menu ul ul{
+        background: rgba(0,0,0,0.4);
+    }
+    
+    
+    .menu ul ul a{
+        padding: 15px 40px;
+    }
+    
+    
+}
